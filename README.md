@@ -32,11 +32,6 @@ This dataset contains **61,486 images** across **39 different classes**, includi
 
 > Images were augmented using techniques like flipping, gamma correction, noise injection, PCA color augmentation, rotation, and scaling.
 
-### 📁 Dataset 
-
-The dataset is already available in the `dataset/` directory and ready for use. The training script automatically detects and uses the image categories inside this folder.
-
-
 ### 📥 Download the Dataset
 
 Run the following script to automatically download the PlantVillage dataset into the `dataset/` directory:
@@ -58,22 +53,18 @@ python scripts/train_model.py
 
 > ⚠️ **Note:** Training can take several minutes or hours depending on your system.
 
-### Checkpoints ### 
-Saved model weights per epoch
-Sure! Here’s a rephrased version:
-
-> Checkpoints are saved during training to allow resuming later, especially since training the model takes a significant amount of time.
-
 
 ### 🎯 Output Files
-
 
 After training, the following files will be created in the `models/` directory:
 
 - **`model.h5`** – The trained CNN model used for predictions.
 - **`class_indices.pkl`** – A dictionary mapping class indices to class names. This is used during prediction to display readable class labels.
 - **`history.pkl`** – Contains training history (accuracy and loss per epoch) and is used to plot performance graphs.
+### Checkpoints ### 
+Saved model weights per epoch
 
+> Checkpoints are saved during training to allow resuming later, especially since training the model takes a significant amount of time.
 
 ---
 
@@ -96,11 +87,12 @@ This script reads the `history.pkl` file and generates performance plots like th
 ### New Accuracy and Loss Plot ###
 ![Training and Validation Accuracy and Loss](./new_accuracy_figure.png)
 
-### Confusion Matrix ###
-![Confusion Matrix](./confusion_matrix.png)
-
 - **Left Chart**: Accuracy over epochs (Train vs Validation)
 - **Right Chart**: Loss over epochs (Train vs Validation)
+
+
+### Confusion Matrix ###
+![Confusion Matrix](./confusion_matrix.png)
 
 This visualization helps understand how well the model is learning and if it's overfitting.
 
@@ -170,12 +162,9 @@ pplant-disease-detection/
 
 ---
 
-## 👥 Authors
+## 👥 Author
 
-- **Samuel Buendía** – [GitHub](https://github.com/samuelbuendia) · [LinkedIn](https://www.linkedin.com/in/samuelbuendia/) · [Portfolio](https://samuelbuendia.com)
 - **Qasam Hussain** – [GitHub](https://github.com/Qasimhussain5753) · [LinkedIn](https://linkedin.com/in/qasam-hussain-53a54912b)
-- **Vaibhav Sharma**
----
 
 ## 📃 License
 
