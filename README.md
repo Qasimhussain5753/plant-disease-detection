@@ -21,7 +21,6 @@ This project uses EfficientNetB0, a state-of-the-art Convolutional Neural Networ
 
 ✅ Trained using ImageDataGenerator with real-time data augmentation
 ---
-
 ## 📦 Dataset
 
 We used a dataset from **Mendeley Data**:
@@ -32,6 +31,25 @@ This dataset contains **61,486 images** across **39 different classes**, includi
 
 > Images were augmented using techniques like flipping, gamma correction, noise injection, PCA color augmentation, rotation, and scaling.
 
+
+### 📥 Clone the Repository
+
+You can either:
+
+**Clone using Git:**
+
+```bash
+git clone https://github.com/Qasimhussain5753/plant-disease-detection.git
+```
+
+### 🔧 Install Dependencies
+
+To install all required Python packages, run:
+
+```bash
+pip install -r requirements.txt
+```
+
 ### 📥 Download the Dataset
 
 Run the following script to automatically download the PlantVillage dataset into the `dataset/` directory:
@@ -39,6 +57,8 @@ Run the following script to automatically download the PlantVillage dataset into
 ```bash
 python /scripts/download_dataset.py
 ```
+
+
 ## 🏗️ Training the Model
 
 The training script is located in the `scripts/` directory.
@@ -61,12 +81,8 @@ After training, the following files will be created in the `models/` directory:
 - **`model.h5`** – The trained CNN model used for predictions.
 - **`class_indices.pkl`** – A dictionary mapping class indices to class names. This is used during prediction to display readable class labels.
 - **`history.pkl`** – Contains training history (accuracy and loss per epoch) and is used to plot performance graphs.
-### Checkpoints ### 
-Saved model weights per epoch
+- **`Checkpoints`**  Checkpoints are saved during training to allow resuming later, especially since training the model takes a significant amount of time.
 
-> Checkpoints are saved during training to allow resuming later, especially since training the model takes a significant amount of time.
-
----
 
 ## 📈 Visualizing Training Metrics
 

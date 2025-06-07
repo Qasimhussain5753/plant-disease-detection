@@ -41,20 +41,6 @@ def plot_accuracy_and_loss(history_data):
     plt.savefig("training_metrics.png")
     plt.show()
 
-# -----------------------------
-# Plot Confusion Matrix
-# -----------------------------
-def plot_confusion_matrix(y_true, y_pred, class_names):
-    cm = confusion_matrix(y_true, y_pred)
-    plt.figure(figsize=(10, 8))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
-                xticklabels=class_names, yticklabels=class_names)
-    plt.title("Confusion Matrix")
-    plt.xlabel("Predicted")
-    plt.ylabel("Actual")
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
 
 # -----------------------------
 # Show Example Predictions
@@ -80,9 +66,4 @@ def plot_example_predictions(data, predictions_probs, class_names, num_images=9)
 # Run All Visualizations
 # -----------------------------
 plot_accuracy_and_loss(history_data)
-plot_confusion_matrix(y_true, y_pred, class_names)
 
-# Ensure val_data is resettable (like a Keras ImageDataGenerator)
-val_data.reset()
-example_images, _ = next(val_data)
-plot_example_predictions(example_images, y_pred_probs[:9], class_names)
