@@ -1,0 +1,29 @@
+download:
+  url: "https://data.mendeley.com/public-files/datasets/tywbtsjrjv/files/b4e3a32f-c0bd-4060-81e9-6144231f2520/file_downloaded"
+  output_path: "./dataset/plantvillage_dataset.zip"
+
+paths:
+  dataset: "./dataset"
+  model: "./models/model.h5"
+  history: "./models/history.pkl"
+  class_indices: "./models/class_indices.pkl"
+  checkpoint: "./models/checkpoint.h5"
+  log_dir: "./logs"
+
+
+training:
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.0001
+  validation_split: 0.2
+  resume: true   # Set to false if starting from scratch
+
+image:
+  size: [224, 224]
+  channels: 3
+
+augmentation:
+  rescale: 0.003921568627  # 1/255
+  rotation_range: 20
+  zoom_range: 0.15
+  horizontal_flip: true

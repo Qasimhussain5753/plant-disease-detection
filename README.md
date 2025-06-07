@@ -32,12 +32,18 @@ This dataset contains **61,486 images** across **39 different classes**, includi
 
 > Images were augmented using techniques like flipping, gamma correction, noise injection, PCA color augmentation, rotation, and scaling.
 
-### 📁 How the Dataset is Used
+### 📁 Dataset 
 
 The dataset is already available in the `dataset/` directory and ready for use. The training script automatically detects and uses the image categories inside this folder.
 
----
 
+### 📥 Download the Dataset
+
+Run the following script to automatically download the PlantVillage dataset into the `dataset/` directory:
+
+```bash
+python /scripts/download_dataset.py
+```
 ## 🏗️ Training the Model
 
 The training script is located in the `scripts/` directory.
